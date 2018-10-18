@@ -24,7 +24,7 @@
             <thead>
             <tr class="table-header">
                 <th class="">
-                    <div class="">Numero</div>
+                    <div class="">Numeasaro</div>
                 </th>
                 <th class="">
                     <div class="">Data Pedido</div>
@@ -74,7 +74,7 @@
                 <button class="btn btn-success" id="btn_crud_post10837" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i><span></span></button>
                 <button class="btn btn-danger" id="btn_crud_cancel10837" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i><span></span></button>
             </div>
-            <br/>
+            <br>
             <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
 				
 
@@ -82,15 +82,7 @@
                     <div class="form-group">
                         <label for="textinput-numero" class="">Numero</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <input
-                                            type="text"
-                                            ng-model="Pedido.active.numero"
-                                            class="form-control"
-                                            id="textinput-numero"
-                                            placeholder="Numero"
-                                            mask=""
-                                            mask-placeholder=""
-                                            ng-required="false">
+                                <input type="text" ng-model="Pedido.active.numero" class="form-control" id="textinput-numero" placeholder="Numero" mask="" mask-placeholder="" ng-required="false">
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
@@ -100,32 +92,16 @@
                     <div class="form-group">
                         <label for="textinput-dataPedido" class="">Data Pedido</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <input
-                                            type="date"
-                                            ng-model="Pedido.active.dataPedido"
-                                            class="form-control"
-                                            id="textinput-dataPedido"
-                                            placeholder="Data Pedido"
-                                            mask="DD/MM/YYYY"
-                                            mask-placeholder=""
-                                            ng-required="false">
+                                <input type="date" ng-model="Pedido.active.dataPedido" class="form-control" id="textinput-dataPedido" placeholder="Data Pedido" mask="DD/MM/YYYY" mask-placeholder="" ng-required="false">
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
                 <!-- NtoN  -->
 				
-				<datasource 
-					data-component="crn-datasource" 
-					name="PedidoProduto" 
-					entity="app.PedidoProduto" 
-					keys="id" 
-					dependent-lazy-post="Pedido" 
-					rows-per-page="100" 
-					parameters="pedido={{Pedido.active.id|raw}}">
-				</datasource>
+				<datasource data-component="crn-datasource" name="PedidoProduto" entity="app.PedidoProduto" keys="id" dependent-lazy-post="Pedido" rows-per-page="100" parameters="pedido={{Pedido.active.id|raw}}"></datasource>
                 <datasource data-component="crn-datasource" name="ProdutoNCombo" entity="app.Produto" keys="id"></datasource>
 				
-					<h3 class="lead component-holder" data-component="crn-subtitle" xattr-position="text-left" class="text-left" id="crud-title-10837" >Produto</h3>
+					<h3 class="lead component-holder" data-component="crn-subtitle" xattr-position="text-left" id="crud-title-10837">Produto</h3>
 					<div class="component-holder ng-binding ng-scope" data-component="crn-cron-grid" id="crn-grid-Produto-10837">
 						<cron-grid options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;PedidoProduto&quot;,&quot;entity&quot;:&quot;app.PedidoProduto&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.PedidoProduto&quot;,&quot;customId&quot;:&quot;PedidoProduto&quot;,&quot;name&quot;:&quot;PedidoProduto&quot;,&quot;customQueryName&quot;:&quot;app.PedidoProduto&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.PedidoProduto&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;pedido&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;produto&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;pedido_numero&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;produto_nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;pedido&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;produto&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;pedido_numero&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;produto_nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.PedidoProduto&quot;},&quot;allowPaging&quot;:true,&quot;allowSorting&quot;:true,&quot;allowGrouping&quot;:true,&quot;allowSelectionTotalPageToShow&quot;:true,&quot;allowRefreshGrid&quot;:true,&quot;allowSelectionRow&quot;:true,&quot;editable&quot;:&quot;popupCustom&quot;,&quot;popupInsert&quot;:&quot;modalProdutoGrid&quot;,&quot;popupEdit&quot;:&quot;modalProdutoGrid&quot;,&quot;columns&quot;:[{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;produto&quot;,&quot;displayField&quot;:&quot;produto_nome&quot;,&quot;headerText&quot;:&quot;Produto&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;dynamicComboBox&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;ProdutoNCombo&quot;,&quot;entity&quot;:&quot;app.Produto&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Produto&quot;,&quot;customId&quot;:&quot;Produto&quot;,&quot;name&quot;:&quot;ProdutoNCombo&quot;,&quot;customQueryName&quot;:&quot;app.Produto&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Produto&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;valor&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;data&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;valor&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;data&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.Produto&quot;},&quot;filter&quot;:&quot;contains&quot;,&quot;dataTextField&quot;:&quot;nome&quot;,&quot;dataValueField&quot;:&quot;id&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[]}},{&quot;dataType&quot;:&quot;Command&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;command&quot;:&quot;edit|destroy&quot;,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;}],&quot;toolBarButtons&quot;:[{&quot;type&quot;:&quot;Native&quot;,&quot;title&quot;:&quot;create&quot;}],&quot;details&quot;:[]}" ng-model="PedidoProduto.data" class="" style=""></cron-grid>
 					</div>
@@ -138,16 +114,7 @@
                 <!--query filter 1toN -->
                 
 				<!-- query filter 1toN end-->
-				<datasource 
-					data-component="crn-datasource" 
-					filter="" 
-					name="PedidoProdutoGrid" 
-					entity="app.PedidoProduto" 
-					keys="id" 
-					dependent-lazy-post="Pedido" 
-					rows-per-page="100" 
-					parameters="pedido={{Pedido.active.id|raw}}">
-				</datasource>
+				<datasource data-component="crn-datasource" filter="" name="PedidoProdutoGrid" entity="app.PedidoProduto" keys="id" dependent-lazy-post="Pedido" rows-per-page="100" parameters="pedido={{Pedido.active.id|raw}}"></datasource>
 				<!-- teste -->
 				<datasource data-component="crn-datasource" name="ProdutoGridCombo" entity="app.Produto" keys="id" rows-per-page="100"></datasource>
 				<h3 class="lead component-holder" data-component="crn-subtitle">PedidoProduto </h3>				
@@ -182,12 +149,7 @@
 										<div data-component="crn-enterprise-dynamic-combobox" id="crn-combobox-PedidoProdutoGrid.active.produto-10837" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                             <div class="form-group">
                                                 <label for="combobox-modal-produto-10837" class="">Produto</label>
-												<cron-dynamic-select 
-													
-													id="combobox-modal-produto-10837"
-													options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;ProdutoGridForCombo&quot;,&quot;entity&quot;:&quot;app.Produto&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Produto&quot;,&quot;customId&quot;:&quot;Produto&quot;,&quot;name&quot;:&quot;ProdutoGridForCombo&quot;,&quot;customQueryName&quot;:&quot;app.Produto&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Produto&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;valor&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;data&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;valor&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;data&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.Produto&quot;},&quot;filter&quot;:&quot;contains&quot;,&quot;dataTextField&quot;:&quot;nome&quot;,&quot;dataValueField&quot;:&quot;id&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[]}" 
-													ng-model="PedidoProdutoGrid.active.produto" 
-													class="crn-select form-control">
+												<cron-dynamic-select id="combobox-modal-produto-10837" options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;ProdutoGridForCombo&quot;,&quot;entity&quot;:&quot;app.Produto&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Produto&quot;,&quot;customId&quot;:&quot;Produto&quot;,&quot;name&quot;:&quot;ProdutoGridForCombo&quot;,&quot;customQueryName&quot;:&quot;app.Produto&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Produto&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;valor&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;data&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;valor&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;data&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.Produto&quot;},&quot;filter&quot;:&quot;contains&quot;,&quot;dataTextField&quot;:&quot;nome&quot;,&quot;dataValueField&quot;:&quot;id&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[]}" ng-model="PedidoProdutoGrid.active.produto" class="crn-select form-control">
 												</cron-dynamic-select>
                                             </div>
                                         </div>
